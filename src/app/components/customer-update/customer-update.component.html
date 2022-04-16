@@ -1,0 +1,47 @@
+
+<div class="content-wrapper">
+    <!--START CONTENT HEADER -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1> Edit Customer</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Customers</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END CONTENT HEADER -->
+    <section class="content">
+      <div class="container-fluid">
+    <form>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>First Name</label>
+            <input type="text" [(ngModel)]="currentCustomer.firstName" name="firstName" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Last Name</label>
+            <input type="text" name="lastName"  [(ngModel)]="currentCustomer.lastName"  class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Phone Number</label>
+            <input type="number" name="phoneNumber"  [(ngModel)]="currentCustomer.phoneNumber"  class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Company</label>
+            <input type="text" name="company"  [(ngModel)]="currentCustomer.company"  class="form-control">
+        </div>
+        
+        <div class="mt-2">
+            <button type="submit" (click)="updateCustomer()"  class="btn btn-success">Edit Customer</button>
+        </div>
+    </form>
+      </div>
+    </section>
+  </div>
+  

@@ -1,0 +1,59 @@
+
+<div class="content-wrapper">
+    <!--START CONTENT HEADER -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1> Edit Product</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Products</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END CONTENT HEADER -->
+    <section class="content">
+      <div class="container-fluid">
+    <form>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="currentProduct.name" name="nameProduct" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Description</label>
+            <textarea [(ngModel)]="currentProduct.description" name="nameProduct" class="form-control"></textarea>
+        </div>
+        
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Price</label>
+            <input type="number" [(ngModel)]="currentProduct.unitPrice" name="price" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>In Stock</label>
+            <input type="number" [(ngModel)]="currentProduct.unitStock" name="stock" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Category</label>
+        <br>
+            <select class="form-control">
+              <option *ngFor="let cat of categories" value="{{ cat.id}}">{{ cat.name }}</option>
+            </select>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          <label>Image</label>
+          <input type="image" src="currentProduct.image" name="image" class="form-control">
+      </div>
+      
+        <div class="mt-2">
+            <button type="submit" (click)="updateProduct()" class="btn btn-success">Edit Product</button>
+        </div>
+    </form>
+      </div>
+    </section>
+  </div>
+  
